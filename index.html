@@ -1,271 +1,287 @@
-<!DOCTYPE html>  <html lang="ar">  
-<head>  
-  <meta charset="UTF-8" />  
-  <title>ボディ・異世界 (عالم بودي الإيسيكاي)</title>  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
-  <style>  
-    body {  
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
-      text-align: center;  
-      padding: 30px 15px;  
-      background: linear-gradient(120deg, #1a0033, #33004d, #1a0033);  
-      background-size: 300% 300%;  
-      animation: bgFlow 12s ease infinite;  
-      color: #ffffff;  
-      margin: 0;  
-      direction: rtl;  
-      overflow-x: hidden;  
-    }  @keyframes bgFlow {  
-  0% { background-position: 0% 50%; }  
-  50% { background-position: 100% 50%; }  
-  100% { background-position: 0% 50%; }  
-}  
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>ボディ・異世界 (عالم بودي الإيسيكاي)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 30px 15px;
+      background: linear-gradient(120deg, #1a0033, #33004d, #1a0033);
+      background-size: 300% 300%;
+      animation: bgFlow 12s ease infinite;
+      color: #ffffff;
+      margin: 0;
+      direction: rtl;
+      overflow-x: hidden;
+    }
 
-.box {  
-  background-color: #1e1e1e;  
-  padding: 20px;  
-  border-radius: 14px;  
-  box-shadow: 0 0 20px rgba(128, 0, 128, 0.3);  
-  max-width: 100%;  
-  width: 100%;  
-  max-width: 450px;  
-  margin: 40px auto;  
-  opacity: 0;  
-  animation: fadeIn 1.5s ease forwards;  
-}  
+    @keyframes bgFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-@keyframes fadeIn {  
-  to { opacity: 1; transform: translateY(0); }  
-  from { opacity: 0; transform: translateY(30px); }  
-}  
+    .box {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 0 20px rgba(128, 0, 128, 0.3);
+      max-width: 100%;
+      width: 100%;
+      max-width: 450px;
+      margin: 40px auto;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
 
-textarea {  
-  width: 95%;  
-  height: 100px;  
-  font-size: 16px;  
-  background-color: #2c2c2c;  
-  color: white;  
-  border: 1px solid #555;  
-  border-radius: 8px;  
-  padding: 10px;  
-  resize: vertical;  
-}  
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(30px); }
+    }
 
-button {  
-  background: linear-gradient(135deg, #8e2de2, #4a00e0);  
-  border: none;  
-  color: white;  
-  padding: 12px 20px;  
-  margin: 8px 5px;  
-  border-radius: 10px;  
-  font-size: 16px;  
-  cursor: pointer;  
-  transition: transform 0.2s ease, box-shadow 0.2s ease;  
-  position: relative;  
-  overflow: hidden;  
-}  
+    textarea {
+      width: 95%;
+      height: 100px;
+      font-size: 16px;
+      background-color: #2c2c2c;
+      color: white;
+      border: 1px solid #555;
+      border-radius: 8px;
+      padding: 10px;
+      resize: vertical;
+    }
 
-button:hover {  
-  transform: scale(1.05);  
-  box-shadow: 0 0 12px #a64dff;  
-}  
+    button {
+      background: linear-gradient(135deg, #8e2de2, #4a00e0);
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      margin: 8px 5px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
 
-#result {  
-  background-color: #2c2c2c;  
-  padding: 10px;  
-  margin-top: 15px;  
-  border-radius: 8px;  
-  word-break: break-word;  
-  font-size: 15px;  
-  color: #dcdcdc;  
-}  
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #a64dff;
+    }
 
-h2 {  
-  color: #bb86fc;  
-  font-size: 24px;  
-  min-height: 30px;  
-}  
+    #result {
+      background-color: #2c2c2c;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 8px;
+      word-break: break-word;
+      font-size: 15px;
+      color: #dcdcdc;
+    }
 
-.subtitle {  
-  font-size: 15px;  
-  color: #aaa;  
-  margin-top: -10px;  
-}  
+    h2 {
+      color: #bb86fc;
+      font-size: 24px;
+      min-height: 30px;
+    }
 
-.glow {  
-  position: absolute;  
-  top: 0;  
-  left: -75%;  
-  width: 50%;  
-  height: 100%;  
-  background: rgba(255,255,255,0.2);  
-  transform: skewX(-20deg);  
-  animation: shimmer 2.5s infinite;  
-}  
+    .subtitle {
+      font-size: 15px;
+      color: #aaa;
+      margin-top: -10px;
+    }
 
-@keyframes shimmer {  
-  0% { left: -75%; }  
-  50% { left: 125%; }  
-  100% { left: 125%; }  
-}  
+    .glow {
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: rgba(255,255,255,0.2);
+      transform: skewX(-20deg);
+      animation: shimmer 2.5s infinite;
+    }
 
-.modal {  
-  display: none;   
-  position: fixed;  
-  z-index: 1;  
-  left: 0;  
-  top: 0;  
-  width: 100%;  
-  height: 100%;  
-  background-color: rgba(0, 0, 0, 0.5);  
-  padding-top: 60px;  
-}  
+    @keyframes shimmer {
+      0% { left: -75%; }
+      50% { left: 125%; }
+      100% { left: 125%; }
+    }
 
-.modal-content {  
-  background-color: #1e1e1e;  
-  margin: 5% auto;  
-  padding: 20px;  
-  border: 1px solid #888;  
-  width: 80%;  
-  max-width: 500px;  
-  color: white;  
-  border-radius: 10px;  
-  text-align: right;  
-}  
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding-top: 60px;
+    }
 
-.close {  
-  color: #aaa;  
-  float: right;  
-  font-size: 28px;  
-  font-weight: bold;  
-}  
+    .modal-content {
+      background-color: #1e1e1e;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 500px;
+      color: white;
+      border-radius: 10px;
+      text-align: right;
+    }
 
-.close:hover,  
-.close:focus {  
-  color: white;  
-  text-decoration: none;  
-  cursor: pointer;  
-}  
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
 
-#history {  
-  max-height: 200px;  
-  overflow-y: auto;  
-  margin-top: 20px;  
-  background-color: #2c2c2c;  
-  padding: 10px;  
-  border-radius: 8px;  
-  color: white;  
-  font-size: 14px;  
-  text-align: right;  
-  white-space: pre-wrap;  
-}
+    .close:hover, .close:focus {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
-  </style>  
-</head>  
-<body>    <div id="step1" class="box">  
-    <h2 id="typing"></h2>  
-    <div class="subtitle">(عالم بودي الإيسيكاي)</div>  
-    <button onclick="goToStep2()"><span class="glow"></span>تحويل</button>  
-    <button onclick="openModal()"><span class="glow"></span>معلوماتي😳</button>  
-  </div>    <div id="step2" class="box" style="display: none;">  
-    <textarea id="inputText" placeholder="اكتب هنا النص..."></textarea><br>  
-    <button onclick="toUnicode()"><span class="glow"></span>تحويل إلى Unicode</button>  
-    <button onclick="fromUnicode()"><span class="glow"></span>ترجمة من Unicode</button>  
-    <button onclick="copyText()"><span class="glow"></span>نسخ</button>  
-    <button onclick="clearHistory()"><span class="glow"></span>🗑️ مسح الهيستوري</button>  
-    <div id="result"></div>  
-    <div id="history"></div>  
-  </div>    <!-- Modal -->    <div id="aboutModal" class="modal">  
-    <div class="modal-content">  
-      <span class="close" onclick="closeModal()">&times;</span>  
-      <h2>معلوماتي</h2>  
-      <p>(I'm the man who's seeking for perfection) المهم ذا الموقع قيد التطوير و من ذا الكلام باذن الله اخلصه قريب</p>  
-      <p>سناب: <strong>vtr0e</strong> | إنستجرام: <strong>vtr0a</strong></p>  
-    </div>  
-  </div>    <script>  
-    let historyArray = JSON.parse(localStorage.getItem('historyArray')) || [];  
-  
-    function goToStep2() {  
-      document.getElementById('step1').style.display = 'none';  
-      document.getElementById('step2').style.display = 'block';  
-      updateHistoryUI();  
-    }  
-  
-    function toUnicode() {  
-      const text = document.getElementById('inputText').value;  
-      if (!text) {  
-        alert('يرجى إدخال نص صحيح!');  
-        return;  
-      }  
-      let unicode = '';  
-      for (let i = 0; i < text.length; i++) {  
-        unicode += text.charCodeAt(i).toString(16).padStart(4, '0');  
-      }  
-      document.getElementById('result').innerText = `The one who thinks all the time 😎 ${unicode}`;  
-      addToHistory(`your last line was 😎 ${unicode} (${text})`);  
-    }  
-  
-    function fromUnicode() {  
-      const text = document.getElementById('inputText').value;  
-      if (!text) {  
-        alert('يرجى إدخال نص صحيح!');  
-        return;  
-      }  
-      let decoded = '';  
-      for (let i = 0; i < text.length; i += 4) {  
-        const code = text.substr(i, 4);  
-        decoded += String.fromCharCode(parseInt(code, 16));  
-      }  
-      document.getElementById('result').innerText = `that was Ez 😎 ${decoded}`;  
-      addToHistory(`your last line was 😎 ${decoded} (${text})`);  
-    }  
-  
-    function copyText() {  
-      const result = document.getElementById('result').innerText;  
-      navigator.clipboard.writeText(result).then(() => {  
-        alert('✅ تم النسخ!');  
-      });  
-    }  
-  
-    function addToHistory(text) {  
-      historyArray.push(text);  
-      if (historyArray.length > 5) historyArray.shift();  
-      localStorage.setItem('historyArray', JSON.stringify(historyArray));  
-      updateHistoryUI();  
-    }  
-  
-    function updateHistoryUI() {  
-      document.getElementById('history').innerText = historyArray.join("\n\n");  
-    }  
-  
-    function clearHistory() {  
-      historyArray = [];  
-      localStorage.removeItem('historyArray');  
-      updateHistoryUI();  
-      alert("✅ تم مسح الهيستوري بالكامل!");  
-    }  
-  
-    function openModal() {  
-      document.getElementById("aboutModal").style.display = "block";  
-    }  
-  
-    function closeModal() {  
-      document.getElementById("aboutModal").style.display = "none";  
-    }  
-  
-    const typingText = "ボディ・異世界";  
-    let i = 0;  
-    const typingSpeed = 150;  
-    const target = document.getElementById("typing");  
-  
-    function typeWriter() {  
-      if (i < typingText.length) {  
-        target.innerHTML += typingText.charAt(i);  
-        i++;  
-        setTimeout(typeWriter, typingSpeed);  
-      }  
-    }  
-  
-    window.onload = typeWriter;  
-  </script>  </body>  
-</html>  
+    #history {
+      max-height: 200px;
+      overflow-y: auto;
+      margin-top: 20px;
+      background-color: #2c2c2c;
+      padding: 10px;
+      border-radius: 8px;
+      color: white;
+      font-size: 14px;
+      text-align: right;
+      white-space: pre-wrap;
+    }
+
+    .no-copy {
+      user-select: none;  /* يمنع نسخ النص */
+      color: #dcdcdc; /* لتنسيق النص */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="step1" class="box">
+    <h2 id="typing"></h2>
+    <div class="subtitle">(عالم بودي الإيسيكاي)</div>
+    <button onclick="goToStep2()"><span class="glow"></span>تحويل</button>
+    <button onclick="openModal()"><span class="glow"></span>معلوماتي😳</button>
+  </div>
+
+  <div id="step2" class="box" style="display: none;">
+    <textarea id="inputText" placeholder="اكتب هنا النص..."></textarea><br>
+    <button onclick="toUnicode()"><span class="glow"></span>تحويل إلى Unicode</button>
+    <button onclick="fromUnicode()"><span class="glow"></span>ترجمة من Unicode</button>
+    <button onclick="copyText()"><span class="glow"></span>نسخ</button>
+    <button onclick="clearHistory()"><span class="glow"></span>🗑️ مسح الهيستوري</button>
+    <div id="result"></div>
+    <div id="history"></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>معلوماتي</h2>
+      <p>(الموقع قيد التطوير، قريبًا سأنتهي منه بإذن الله)</p>
+      <p>سناب: <strong>vtr0e</strong> | إنستجرام: <strong>vtr0a</strong></p>
+    </div>
+  </div>
+
+  <script>
+    let historyArray = JSON.parse(localStorage.getItem('historyArray')) || [];
+
+    function goToStep2() {
+      document.getElementById('step1').style.display = 'none';
+      document.getElementById('step2').style.display = 'block';
+      updateHistoryUI();
+    }
+
+    function toUnicode() {
+      const text = document.getElementById('inputText').value;
+      if (!text) {
+        alert('يرجى إدخال نص صحيح!');
+        return;
+      }
+      let unicode = '';
+      for (let i = 0; i < text.length; i++) {
+        unicode += text.charCodeAt(i).toString(16).padStart(4, '0');
+      }
+      document.getElementById('result').innerHTML = `${unicode}`;
+      addToHistory(`your last line was ${unicode} (${text})`);
+    }
+
+    function fromUnicode() {
+      const text = document.getElementById('inputText').value;
+      if (!text) {
+        alert('يرجى إدخال نص صحيح!');
+        return;
+      }
+      let decoded = '';
+      for (let i = 0; i < text.length; i += 4) {
+        const code = text.substr(i, 4);
+        decoded += String.fromCharCode(parseInt(code, 16));
+      }
+      document.getElementById('result').innerHTML = `${decoded}`;
+      addToHistory(`your last line was ${decoded} (${text})`);
+    }
+
+    function copyText() {
+      const result = document.getElementById('result').innerText;
+      navigator.clipboard.writeText(result).then(() => {
+        alert('✅ تم النسخ!');
+      });
+    }
+
+    function addToHistory(text) {
+      historyArray.push(text);
+      if (historyArray.length > 5) historyArray.shift();
+      localStorage.setItem('historyArray', JSON.stringify(historyArray));
+      updateHistoryUI();
+    }
+
+    function updateHistoryUI() {
+      document.getElementById('history').innerText = historyArray.join("\n\n");
+    }
+
+    function clearHistory() {
+      historyArray = [];
+      localStorage.removeItem('historyArray');
+      updateHistoryUI();
+      alert("✅ تم مسح الهيستوري بالكامل!");
+    }
+
+    function openModal() {
+      document.getElementById("aboutModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("aboutModal").style.display = "none";
+    }
+
+    const typingText = "ボディ・異世界";
+    let i = 0;
+    const typingSpeed = 150;
+    const target = document.getElementById("typing");
+
+    function typeWriter() {
+      if (i < typingText.length) {
+        target.innerHTML += typingText.charAt(i);
+        i++;
+        setTimeout(typeWriter, typingSpeed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
